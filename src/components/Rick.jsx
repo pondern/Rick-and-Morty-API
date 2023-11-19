@@ -1,11 +1,11 @@
-// RickAndMorty.jsx
+// Rick.jsx
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import RickAndMortyModal from "./RickAndMortyModal";
+import RickModal from "./RickModal";
 
 const baseURL = "https://rickandmortyapi.com/api/character";
 
-const RickAndMorty = () => {
+const Rick = () => {
   const [characters, setCharacters] = useState([]);
   const [selectedCharacter, setSelectedCharacter] = useState(null);
 
@@ -47,9 +47,9 @@ const RickAndMorty = () => {
           <img src={character.image} alt={character.name} />
         </div>
       ))}
-      {selectedCharacter && <RickAndMortyModal character={selectedCharacter} />}
+      {selectedCharacter && <RickModal character={selectedCharacter} />}
     </div>
   );
 };
 
-export default RickAndMorty;
+export default Rick;
