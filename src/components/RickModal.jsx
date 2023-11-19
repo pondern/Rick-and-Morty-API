@@ -1,7 +1,7 @@
 // RickAndMortyModal.jsx
 import React from "react";
 
-const RickAndMortyModal = ({ character }) => {
+const RickModal = ({ character }) => {
   return (
     <div className="modal-info">
       <h1 id="modal-title">{character.name}</h1>
@@ -12,4 +12,4 @@ const RickAndMortyModal = ({ character }) => {
   );
 };
 
-export default RickAndMortyModal;
+export default RickModal;
