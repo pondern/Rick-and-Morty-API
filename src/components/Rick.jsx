@@ -1,4 +1,3 @@
-// Rick.jsx
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import RickModal from "./RickModal";
@@ -26,14 +25,13 @@ const Rick = () => {
     try {
       const response = await axios.get(`${baseURL}/${id}`);
       setSelectedCharacter(response.data);
-      openModal();
     } catch (error) {
       console.error("Error:", error);
     }
   };
 
-  const openModal = () => {
-    // Implement your modal logic here
+  const closeModal = () => {
+    setSelectedCharacter(null);
   };
 
   return (
@@ -47,7 +45,9 @@ const Rick = () => {
           <img src={character.image} alt={character.name} />
         </div>
       ))}
-      {selectedCharacter && <RickModal character={selectedCharacter} />}
+      {selectedCharacter && (
+        <RickModal character={selectedCharacter} closeModal={closeModal} />
+      )}
     </div>
   );
 };

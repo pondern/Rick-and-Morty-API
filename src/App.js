@@ -8,8 +8,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Rick and Morty Characters</h1>
-        <Rick />
       </header>
+      <Rick />
     </div>
   );
 }
